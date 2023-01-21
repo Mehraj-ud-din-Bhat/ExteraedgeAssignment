@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.withTransaction
 
 import com.example.exteraedgeassignment.data.local.database.RocketDatabase
+import com.example.exteraedgeassignment.data.local.entity.Rocket
 import com.example.exteraedgeassignment.data.local.entity.RocketEntity
 import com.example.exteraedgeassignment.data.remote.APIService
 import com.example.exteraedgeassignment.utils.Resource
@@ -15,7 +16,7 @@ import networkBoundResource
 class Repository(val database: RocketDatabase, val apiService: APIService) {
       val dao=database.rocketDAO()
 
- fun getRockets(): Flow<Resource<List<RocketEntity>>> = networkBoundResource(
+ fun getRockets(): Flow<Resource<List<Rocket>>> = networkBoundResource(
         query = {
             dao.getAllRockets()
         },
@@ -28,10 +29,12 @@ class Repository(val database: RocketDatabase, val apiService: APIService) {
                 for(r in rockets.body()!!)
                 {
                     dao.insertRocket(r.getRocketEntity())
+                    dao.insertFlickerImages(r.getRocketFlickerImageList())
                 }
                // dao.insertAll(rockets.body())
             }
         }
     )
+
 
 }

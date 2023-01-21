@@ -1,5 +1,6 @@
 package com.example.exteraedgeassignment.data.remote.models
 
+import com.example.exteraedgeassignment.data.local.entity.FlickerImageEntity
 import com.example.exteraedgeassignment.data.local.entity.RocketEntity
 
 class RocketModel (
@@ -38,17 +39,24 @@ class RocketModel (
          model.WikipediaLink=this.wikipedia
          model.EnginesCount=this.engines!!.number
          model.Company=this.company
-          var str="["
-         for(f in flickr_images!!)
-         {
-            str= "$str '$f',"
-         }
-         str= "$str ]";
-         model.flickerImages=str;
+
 
          return model
 
      }
+
+    fun getRocketFlickerImageList():List<FlickerImageEntity>{
+        var list=ArrayList<FlickerImageEntity>()
+
+        for(str in this.flickr_images!!)
+        {
+            var image=FlickerImageEntity();
+            image.RocketID=this.id!!
+            image.ImageUrl=str
+            list.add(image)
+        }
+        return list
+    }
  }
 
 

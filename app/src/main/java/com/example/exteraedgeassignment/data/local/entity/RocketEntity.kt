@@ -19,7 +19,7 @@ import androidx.room.PrimaryKey
     var WikipediaLink: String?=null
     var HeightInMeter: Double?=null
     var DiameterInMeter: Double?=null
-    var flickerImages: String?=null
+
 }
 
 

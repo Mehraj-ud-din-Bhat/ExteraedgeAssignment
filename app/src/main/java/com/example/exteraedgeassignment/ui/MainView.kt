@@ -14,7 +14,10 @@ class MainView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mainViewModel.rockets.observe(this){
+           if(true)
+           {
 
+           }
         }
     }
 }
