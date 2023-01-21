@@ -26,6 +26,7 @@ class Repository(val database: RocketDatabase, val apiService: APIService) {
         },
         saveFetchResult = { rockets ->
             database.withTransaction {
+
                 for(r in rockets.body()!!)
                 {
                     dao.insertRocket(r.getRocketEntity())

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RocketDetailActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/rocketName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="SPACE X"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/activeStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="SPACE X"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            />
+
+        <TextView
+            android:id="@+id/cpl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="SPACE X"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            />
+        <TextView
+            android:id="@+id/srp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="SPACE X"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="SPACE X"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            />
+        <TextView
+            android:id="@+id/wiki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="SPACE X"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            />
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="SPACE X"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            />
+
+        <TextView
+            android:id="@+id/diameter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="SPACE X"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

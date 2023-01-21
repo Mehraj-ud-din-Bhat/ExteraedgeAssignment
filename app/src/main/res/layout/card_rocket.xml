@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="5dp"
+
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <ImageView
+            android:id="@+id/image_i"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_launcher" />
+
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             app:layout_constraintRight_toRightOf="parent"
+             android:orientation="vertical"
+             android:paddingLeft="10dp"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintLeft_toRightOf="@id/image_i"
+             >
+
+             <TextView
+                 android:id="@+id/name"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="Name"
+                 android:textColor="@color/black"
+                 android:textSize="16sp"
+                 android:fontFamily="@font/poppins"
+                 />
+             <TextView
+                 android:id="@+id/country"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="Name"
+                 android:textColor="@color/black"
+                 android:textSize="12sp"
+                 android:fontFamily="@font/poppins"
+                 />
+             <TextView
+                 android:id="@+id/engineCount"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="Name"
+                 android:textColor="@color/black"
+                 android:textSize="12sp"
+                 android:fontFamily="@font/poppins"
+                 />
+
+         </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

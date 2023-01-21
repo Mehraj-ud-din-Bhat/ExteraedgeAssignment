@@ -7,7 +7,7 @@ import androidx.room.Relation
 
 
 
-class Rocket {
+class Rocket : java.io.Serializable{
     @Embedded
     var rocket: RocketEntity? = null
     @Relation(
@@ -16,4 +16,15 @@ class Rocket {
         entity =FlickerImageEntity::class
     )
     var flickerImages: List<FlickerImageEntity>? = null
+    fun getRocketThumbnail():String
+    {
+        if(flickerImages!=null)
+        {
+            if(flickerImages!!.size>0)
+            {
+                return flickerImages!!.get(0).ImageUrl
+            }
+        }
+        return  ""
+    }
 }

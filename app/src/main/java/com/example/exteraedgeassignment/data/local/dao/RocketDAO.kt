@@ -19,8 +19,10 @@ interface RocketDAO {
     suspend fun  insertRocket(rocket:RocketEntity)
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun  insertFlickerImages(rocket:List<FlickerImageEntity>)
-    @Query("SELECT * FROM Rockets")
+      @Query("SELECT * FROM Rockets")
       fun  getAllRockets(): Flow<List<Rocket>>
+
+//      fun deleteAllImages()
 
 
 
